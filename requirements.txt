@@ -22,7 +22,6 @@ ipykernel
 openpyxl         # For Excel files
 xlrd             # For older Excel file formats
 sqlalchemy       # If you're working with databases
-sqlite3          # Built-in, listed for clarity
 
 # Optional: Scikit-learn for basic modeling or clustering
 scikit-learn
