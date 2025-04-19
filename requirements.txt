@@ -1,0 +1,34 @@
+# Keep pip upgraded (manages the installation of packages)
+pip
+
+# Easy logging to keep track of code execution 
+loguru
+
+# Core libraries
+pandas
+numpy
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Jupyter support
+notebook
+jupyterlab
+ipykernel
+
+# Data manipulation
+openpyxl         # For Excel files
+xlrd             # For older Excel file formats
+sqlalchemy       # If you're working with databases
+sqlite3          # Built-in, listed for clarity
+
+# Optional: Scikit-learn for basic modeling or clustering
+scikit-learn
+
+# Optional: tqdm for progress bars
+tqdm
+
+# Optional: Power BI external tools (only if needed via Python)
+# No direct pbi python package, but you may export CSVs from Power BI

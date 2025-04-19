@@ -1,0 +1,52 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+.jupyter/
+
+# --- Virtual environments ---
+venv/
+env/
+.venv/
+
+# --- VS Code settings ---
+.vscode/
+
+# --- Power BI files ---
+*.pbix
+*.pbit
+# Optional: ignore temporary analysis files or autosaves
+*.pbix.autosave
+
+# --- Data files (optional depending on size/sensitivity) ---
+*.csv
+*.xlsx
+*.xls
+*.json
+*.xml
+*.parquet
+*.db
+*.sqlite
+data/
+datasets/
+
+# Optional: keep data folder structure
+data/*
+!data/.gitkeep
+
+# --- Environment and secrets ---
+*.env
+.env.*
+
+# --- Logs and temporary files ---
+*.log
+*.tmp
+*.out
+*.bak
+
+# --- OS-specific ---
+.DS_Store
+Thumbs.db
