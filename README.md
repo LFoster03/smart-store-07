@@ -3,13 +3,24 @@
 ## Date: April 2025
 This project focuses on preparing and cleaning retail data from a fictional smart store for Business Intelligence (BI) and customer analytics. The dataset includes customer, product, and sales information.
 
+# Section 1. The Business Goal
+Analyze customers based on total spend and purchase frequency, then analyze where these high-value customers come from (regions) and what demographic traits they share (e.g., age, gender).
+### Questions I want to answer:
+1. Who are the store’s most valuable customers?
+
+2. Where are they located?
+
+3. What do they typically buy (category preferences)?
+
+4. Do certain demographics tend to be more loyal or spend more?
+
 # Create files and folders
 .gitignore, requirements.txt, .venv, utils with logger.py, data folder with raw and prepared and scripts folder.
 Then get the csv files and add data, then upload to data raw.
 
-# Clean data files
+# Section 2. Data Source
 
-## 📁 Files Involved
+## 📁 Files Involved: [smart-sales-raw-data](https://github.com/denisecase/smart-sales-raw-data/tree/main)
 
 **Raw Data Files** (stored in `data/raw/`):
 - `customers_data.csv`: Customer details including demographics.
@@ -56,4 +67,13 @@ The script `scripts/prepare_data.py` performs the following operations:
 
 ```bash
 python scripts/prepare_data.py
+```
 
+# Section 3. Tools Used
+
+
+Section 4. Workflow & Logic
+Section 5. Results (narrative + visualizations)
+Section 6. Suggested Business Action
+Section 7. Challenges
+Section 8. Ethical Considerations
