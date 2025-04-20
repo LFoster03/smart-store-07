@@ -141,6 +141,117 @@ Output
 A SQLite database is created at:
 data/dw/smart_store.db
 
+## OLAP Plan
+### Business Goal
+Identify and analyze high-value customer segments by region and demographics.
+We want to discover who the most valuable customers are, where they are located, and what characteristics (like age group or gender) define them.
+
+### Planned Visualizations and Outputs
+1. Total Sales by Customer Region and Age Group
+Title: Total Sales by Region and Age Group
+
+Chart Type: Clustered Bar Chart
+
+X-Axis: Customer Region
+
+Y-Axis: Total Sales Amount
+
+Legend: Age Groups (e.g., "18–25", "26–35", etc.)
+
+Color Scheme: Use distinct colors for each age group for easy comparison
+
+Why this chart?: Easy to compare how different age segments perform across regions.
+
+2. High-Value Customer Count by Gender and Age Group
+Title: Number of High-Value Customers by Gender and Age Group
+
+Chart Type: Stacked Bar Chart
+
+X-Axis: Age Group
+
+Y-Axis: Number of Customers
+
+Legend: Gender
+
+Highlight: Use bold colors to highlight large segments.
+
+Why this chart?: Reveals if loyalty and value are tied to certain demographic traits.
+
+3. Category Preferences of High-Value Customers
+Title: Preferred Product Categories of High-Value Customers
+
+Chart Type: Pie Chart or Horizontal Bar Chart
+
+Labels: Category Names
+
+Values: % Share of Sales
+
+Why this chart?: Helps marketing or product teams understand which products appeal to VIP customers.
+
+4. Average Spend per Customer by Region
+Title: Average Spend per Customer by Region
+
+Chart Type: Column Chart
+
+X-Axis: Region
+
+Y-Axis: Avg. Spend per Customer (Total Spend / Unique Customers)
+
+Why this chart?: Determines how profitable each region's customers are.
+
+### Source Selection
+Source: data/dw/smart_store.db
+Use this SQLite data warehouse created in the earlier step.
+
+Tables & Columns Needed
+Tables:
+
+fact_sales
+
+dim_customers
+
+dim_products
+
+Columns:
+
+From fact_sales: customer_id, product_id, sale_amount, sale_date
+
+From dim_customers: region, gender, age_group
+
+From dim_products: category
+
+### Workflow Steps
+Join fact_sales with dim_customers and dim_products
+
+Aggregate total sales by:
+
+Region & age group
+
+Customer gender & age group
+
+Product category
+
+Region (for average spend)
+
+Filter for high-value customers (e.g., customers with total spend above a certain threshold)
+
+Calculate:
+
+Total spend per customer
+
+Average spend per region
+
+Group and summarize for each chart as needed.
+
+### Expected Outputs (Sample Columns)
+region, age_group, total_sales
+
+age_group, gender, customer_count
+
+category, total_sales_by_vip_customers
+
+region, avg_spend_per_customer
+
 
 Section 5. Results (narrative + visualizations)
 Section 6. Suggested Business Action
