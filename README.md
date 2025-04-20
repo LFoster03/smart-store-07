@@ -70,9 +70,78 @@ python scripts/prepare_data.py
 ```
 
 # Section 3. Tools Used
+VS Code, Python, SQLite, ChatGPT, Power BI
 
 
-Section 4. Workflow & Logic
+# Section 4. Workflow & Logic
+## Data Warehouse Creation
+After cleaning the data, we organize it into a data warehouse using SQLite for analysis and reporting.
+Data Warehouse Structure
+Location:
+data/dw/smart_store.db
+
+Tables:
+
+dim_customers – Dimension table containing enriched customer data (e.g., age, gender, region, age group).
+
+dim_products – Dimension table with product details (name, category, unit price).
+
+fact_sales – Fact table containing transaction-level sales data, including sale date, customer and product IDs, and sales breakdowns (e.g., year, month, quarter).
+
+Steps Performed by scripts/create_data_warehouse.py
+Loads cleaned datasets from data/prepared/:
+
+cleaned_customers.csv
+
+cleaned_products.csv
+
+cleaned_sales.csv
+
+Creates a new SQLite database at data/dw/smart_store.db.
+
+Writes each dataset to a corresponding table:
+
+dim_customers, dim_products, fact_sales
+
+Adds indexes on key fields (e.g., CustomerID, ProductID) to optimize performance.
+
+## Data Warehouse Creation & Loading
+This step sets up a SQLite data warehouse in a star schema format and loads it with cleaned data from the data/prepared/ folder.
+
+Star Schema Structure
+Fact Table: fact_sales
+Stores transactional sales data with keys linking to dimension tables and time breakdowns.
+
+Dimension Tables:
+
+dim_customers: Customer demographics and segmentation.
+
+dim_products: Product categories and pricing.
+
+Script Overview
+The script scripts/dw_build.py handles:
+
+Creation of Tables:
+
+Creates fact and dimension tables using SQLite with appropriate relationships.
+
+Loading Data:
+
+Reads from the cleaned CSVs:
+
+cleaned_customers.csv
+
+cleaned_products.csv
+
+cleaned_sales.csv
+
+Loads them into their respective tables.
+
+Output
+A SQLite database is created at:
+data/dw/smart_store.db
+
+
 Section 5. Results (narrative + visualizations)
 Section 6. Suggested Business Action
 Section 7. Challenges
