@@ -365,19 +365,22 @@ Demographic Filters: Region, gender, and age group slicers were added to explore
 # Section 5. Results (narrative + visualizations)
 ## Power BI
 
-1. ![Purchase frequency segmented by age group and gender.](C:\Projects\smart-store-07\olap\pics\PurchaseFreqbyAgeGender.png)
+1. ![Purchase frequency segmented by age group and gender.](olap\pics\PurchaseFreqbyAgeGender.png)
 
-2. ![Spending patterns by day within each month. ](C:\Projects\smart-store-07\olap\pics\SpendbyDayMonth.png)
+2. ![Spending patterns by day within each month.](olap\pics\SpendbyDayMonth.png)
 
-3. SpendbyDayYear.png – Daily spend trends across the year. ![Daily spend trends across the year. ](SpendbyDayYear.png)
+3. ![Daily spend trends across the year. ](olap\pics\SpendbyDayYear.png)
 
-4. SpendbyGender.png – Total spend segmented by gender.
+4. ![Total spend segmented by gender.](olap\pics\SpendbyGender.png)
 
-5. SpendbyRegion.png – Total spend segmented by region.
+5. SpendbyRegion.png – Total spend segmented by region. ![Total spend segmented by region.](olap\pics\SpendbyRegion.png)
 
-6. SumSpendbyCategory.png – Possibly total spend by product category (maybe filtered or with a different measure like sum vs. count).
 
-7. TotalSpendbyCategory.png – Also shows spend by category; may vary from the previous based on aggregation logic or filters.
+6. ![Possibly total spend by product category (maybe filtered or with a different measure like sum vs. count)](olap\pics\SumSpendbyCategory.png)
+
+
+7. ![Also shows spend by category; may vary from the previous based on aggregation logic or filters.](olap\pics\TotalSpendbyCategory.png)
+
 
 
 
