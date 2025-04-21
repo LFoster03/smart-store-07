@@ -252,6 +252,73 @@ category, total_sales_by_vip_customers
 
 region, avg_spend_per_customer
 
+# Slicing, Dicing, and Drilldown using PowerBI and Python
+
+## Python
+### Slicing – Focus by Dimension
+Filter for high-value customers only
+
+Criteria: Customers with total spend > $1000 and purchase frequency > X
+
+Implementation:
+
+Group by customer_id, aggregate sale_amount
+
+Filter to keep top customers (e.g., top 20% by spend)
+
+```
+python 
+# Slice: High-value customers
+high_value_customers = sales_df.groupby('customerid').agg(
+    total_spent=('saleamount', 'sum'),
+    purchases=('transactionid', 'count')
+).reset_index()
+
+top_spenders = high_value_customers[high_value_customers['total_spent'] > 1000]
+```
+#### Heatmap of High-Value Customer Sales by Region and Category
+- Filtered the dataset to include only rows where `category == 'Electronics'`.
+- Aggregated total sales within the filtered subset.
+
+### Dicing – Break Down into Subcategories
+Example: Analyze by Region and Category and then Region and Gender
+Group by Region and Category then aggregate
+
+Group by region, gender, then aggregate
+```
+python
+# Dice: By Region and Gender
+merged = top_spenders.merge(customers_df, on='customerid')
+regional_breakdown = merged.groupby(['region', 'gender']).agg(
+    avg_spent=('total_spent', 'mean'),
+    customer_count=('customerid', 'nunique')
+).reset_index()
+```
+Then group with all three and aggregate
+
+### Drilldown – General to Specific
+Analyze trends from Year → Quarter → Month
+
+Approach:
+
+Converted saledate to datetime and extracted year, month, and day.
+
+Grouped sales by these components to reveal daily trends.
+
+Created a composite date column for proper chronological sorting and visualization.
+
+Use sales_df with time breakdown columns
+
+Group by time hierarchy + demographics
+```
+# Drilldown: Year > Quarter > Month
+time_trends = sales_df.merge(customers_df[['customerid', 'region']], on='customerid')
+time_breakdown = time_trends.groupby(['sale_year', 'sale_quarter', 'sale_month_name', 'region']).agg(
+    total_sales=('saleamount', 'sum')
+).reset_index()
+```
+
+
 
 Section 5. Results (narrative + visualizations)
 Section 6. Suggested Business Action
