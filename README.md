@@ -318,6 +318,42 @@ time_breakdown = time_trends.groupby(['sale_year', 'sale_quarter', 'sale_month_n
 ).reset_index()
 ```
 
+## Power BI
+Power BI Setup Instructions
+📥 1. Load Data
+Import your CSVs into Power BI (customers.csv, sales.csv, products.csv).
+
+Ensure relationships are set up:
+
+sales.customerid → customers.customerid
+
+sales.productid → products.productid
+
+🔍 Slicing – Focus on High-Value Customers
+💡 Business Question:
+"Who are the store’s most valuable customers?"
+
+🔧 Steps:
+Create Measures:
+
+DAX
+TotalSpend = SUM('fact_sales'[saleamount])
+PurchaseFrequency = COUNT('fact_sales'[transactionid])
+
+Slicing: By Region, Gender, Age Group
+- Slicers added for region, gender, and age_group for interactive filtering.
+- Table view of customers with TotalSpend and PurchaseFrequency.
+
+Dicing: Multi-dimensional Breakdown
+- Bar chart of TotalSpend by region
+- Column chart of TotalSpend by category
+- tacked bar showing PurchaseFrequency by age_group and gender
+
+Drilldown: From Year → Month → Day
+- Grouped fact_sales by sale_year, sale_month, sale_day
+- Created a date hierarchy for drilldown
+- Used a line chart with drilldown to show daily sales trends over time
+
 
 
 Section 5. Results (narrative + visualizations)
