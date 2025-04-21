@@ -354,9 +354,33 @@ Drilldown: From Year → Month → Day
 - Created a date hierarchy for drilldown
 - Used a line chart with drilldown to show daily sales trends over time
 
+### Visualizing High-Value Customer Preferences
+Customer Spend Table: A table visual showing each customer with their CustomerSpend, sorted descending to highlight the most valuable ones.
+
+Sales by Category: A stacked bar chart showing which product categories high-value customers prefer. This was achieved by joining fact_sales with the products table and plotting total CustomerSpend per category.
+
+Demographic Filters: Region, gender, and age group slicers were added to explore trends in loyalty and spending patterns.
 
 
-Section 5. Results (narrative + visualizations)
+# Section 5. Results (narrative + visualizations)
+## Power BI
+
+1. ![Purchase frequency segmented by age group and gender.](C:\Projects\smart-store-07\olap\pics\PurchaseFreqbyAgeGender.png)
+
+2. ![Spending patterns by day within each month. ](C:\Projects\smart-store-07\olap\pics\SpendbyDayMonth.png)
+
+3. SpendbyDayYear.png – Daily spend trends across the year. ![Daily spend trends across the year. ](SpendbyDayYear.png)
+
+4. SpendbyGender.png – Total spend segmented by gender.
+
+5. SpendbyRegion.png – Total spend segmented by region.
+
+6. SumSpendbyCategory.png – Possibly total spend by product category (maybe filtered or with a different measure like sum vs. count).
+
+7. TotalSpendbyCategory.png – Also shows spend by category; may vary from the previous based on aggregation logic or filters.
+
+
+
 Section 6. Suggested Business Action
 Section 7. Challenges
 Section 8. Ethical Considerations
