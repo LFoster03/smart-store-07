@@ -364,6 +364,7 @@ Demographic Filters: Region, gender, and age group slicers were added to explore
 
 # Section 5. Results (narrative + visualizations)
 ## Power BI
+### Visualizations
 
 1. ![Purchase frequency segmented by age group and gender.](olap\pics\PurchaseFreqbyAgeGender.png)
 
@@ -373,15 +374,83 @@ Demographic Filters: Region, gender, and age group slicers were added to explore
 
 4. ![Total spend segmented by gender.](olap\pics\SpendbyGender.png)
 
-5. SpendbyRegion.png – Total spend segmented by region. ![Total spend segmented by region.](olap\pics\SpendbyRegion.png)
-
+5. ![Total spend segmented by region.](olap\pics\SpendbyRegion.png)
 
 6. ![Possibly total spend by product category (maybe filtered or with a different measure like sum vs. count)](olap\pics\SumSpendbyCategory.png)
 
-
 7. ![Also shows spend by category; may vary from the previous based on aggregation logic or filters.](olap\pics\TotalSpendbyCategory.png)
 
+### Results
 
+1. Customer Segmentation by Age and Gender
+(Visualization: PurchaseFreqbyAgeGender.png)
+
+This chart analyzes purchase frequency across different age groups segmented by gender. A few notable trends emerged:
+
+Age groups 25–34 and 35–44 showed the highest purchase activity, indicating a key target demographic.
+
+Within these groups, female customers slightly outpaced males in frequency, suggesting higher engagement or loyalty.
+
+Younger age groups (18–24), while active, had slightly lower frequency—potentially a growth area for targeted marketing.
+
+This suggests that marketing strategies focusing on young to middle-aged adults, particularly females, may yield the greatest returns in repeat purchases.
+
+2. Total Spend by Gender
+(Visualization: SpendbyGender.png)
+
+Spending by gender reveals that:
+
+Males contributed slightly more in total spend than females.
+
+This contrasts with the frequency chart, where females showed more frequent purchases—indicating males might be making fewer but higher-value transactions.
+
+Segmented campaigns can capitalize on this by promoting high-ticket items to male customers and offering bundle or loyalty incentives to females for their frequent visits.
+
+3. Regional Spend Patterns
+(Visualization: SpendbyRegion.png)
+
+The regional analysis highlights:
+
+Central and West regions had the highest customer spend, indicating strong market presence and potentially larger or more loyal customer bases.
+
+North and East regions trailed slightly, suggesting an opportunity for expansion or engagement initiatives.
+
+Drilling into the customer base by region can help identify whether these differences stem from population size, store presence, or regional preferences.
+
+4. Total Spend by Product Category
+(Visuals: TotalSpendbyCategory.png, SumSpendbyCategory.png)
+
+These charts explore customer preferences at the category level:
+
+Electronics consistently drive the highest revenue, followed by Fitness products.
+
+Spend is fairly distributed across categories, though accessories and miscellaneous items underperform.
+
+This points to Electronics and Fitness as high-margin categories where deeper product range and upselling can enhance returns.
+
+5. Spend Trends Over Time
+(Visualizations: SpendbyDayYear.png, SpendbyDayMonth.png)
+
+Temporal analysis uncovers seasonality and promotional opportunities:
+
+Spend spikes occur in mid-year and holiday seasons, suggesting sales events or campaigns during these periods are effective.
+
+Daily patterns indicate weekends and specific mid-month days often see elevated spend, possibly linked to pay cycles or marketing pushes.
+
+Understanding these timing patterns can help optimize inventory, staffing, and promotions around seasonal peaks and high-traffic days.
+
+Conclusion
+These visualizations support strategic decision-making by identifying:
+
+High-value demographics: 25–44 age group, females for frequency, and males for value.
+
+Strong regions: Central and West, with growth potential in North and East.
+
+Best-performing categories: Electronics and Fitness.
+
+Timely engagement: Mid-year and holiday periods with weekly spend peaks.
+
+Future strategies should emphasize personalized campaigns, region-specific promotions, and category-focused merchandising to drive growth and retain top customer segments.
 
 
 Section 6. Suggested Business Action
