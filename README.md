@@ -358,7 +358,7 @@ Demographic Filters: Region, gender, and age group slicers were added to explore
 ## Power BI
 ### Visualizations
 
-1. ![Purchase frequency segmented by age group and gender.](olap\pics\PurchaseFreqbyAgeGender.png)
+1. ![Purchase frequency segmented by age group and gender.](olap/pics/PurchaseFreqbyAgeGender.png)
 
 2. ![Spending patterns by day within each month.](olap\pics\SpendbyDayMonth.png)
 
