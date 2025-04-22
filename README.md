@@ -360,17 +360,17 @@ Demographic Filters: Region, gender, and age group slicers were added to explore
 
 1. ![Purchase frequency segmented by age group and gender.](olap/pics/PurchaseFreqbyAgeGender.png)
 
-2. ![Spending patterns by day within each month.](olap\pics\SpendbyDayMonth.png)
+2. ![Spending patterns by day within each month.](olap/pics/SpendbyDayMonth.png)
 
-3. ![Daily spend trends across the year. ](olap\pics\SpendbyDayYear.png)
+3. ![Daily spend trends across the year. ](olap/pics/SpendbyDayYear.png)
 
-4. ![Total spend segmented by gender.](olap\pics\SpendbyGender.png)
+4. ![Total spend segmented by gender.](olap/pics/SpendbyGender.png)
 
-5. ![Total spend segmented by region.](olap\pics\SpendbyRegion.png)
+5. ![Total spend segmented by region.](olap/pics/SpendbyRegion.png)
 
-6. ![Possibly total spend by product category (maybe filtered or with a different measure like sum vs. count)](olap\pics\SumSpendbyCategory.png)
+6. ![Possibly total spend by product category (maybe filtered or with a different measure like sum vs. count)](olap/pics/SumSpendbyCategory.png)
 
-7. ![Also shows spend by category; may vary from the previous based on aggregation logic or filters.](olap\pics\TotalSpendbyCategory.png)
+7. ![Also shows spend by category; may vary from the previous based on aggregation logic or filters.](olap/pics/TotalSpendbyCategory.png)
 
 ### Results
 
