@@ -32,35 +32,35 @@ Then get the csv files and add data, then upload to data raw.
 - `cleaned_products.csv`
 - `cleaned_sales.csv`
 
-## 🧹 Data Cleaning and Transformation Steps
+## Data Cleaning and Transformation Steps
 
 The script `scripts/prepare_data.py` performs the following operations:
 
-### 1. 🔡 Standardize Column Names
+### 1. Standardize Column Names
 - Converts all column headers to lowercase and replaces spaces with underscores for consistency.
 
-### 2. 🧼 Remove Duplicates and Handle Missing Values
+### 2. Remove Duplicates and Handle Missing Values
 - Drops duplicate rows from all datasets.
 - Removes records with missing critical IDs or date fields.
 
-### 3. 🗓️ Format Date Columns
+### 3. Format Date Columns
 - Converts these fields into proper datetime format:
   - `birthdate`, `joindate` in `customers_data.csv`
   - `saledate` in `sales_data.csv`
 
-### 4. 👵 Calculate Customer Age and Age Group
+### 4. Calculate Customer Age and Age Group
 - Computes each customer's age from their birthdate.
 - Adds a new `age_group` column with predefined age brackets:
   - Under 18, 18–25, 26–35, 36–45, 46–60, 60+
 
-### 5. 📅 Add Date Features to Sales
+### 5. Add Date Features to Sales
 - Extracts and adds the following from each `saledate`:
   - `sale_year` (e.g., 2024)
   - `sale_month` (e.g., 3)
   - `sale_month_name` (e.g., March)
   - `sale_quarter` (e.g., 2024Q1)
 
-## 🛠️ How to Run
+## How to Run
 
 1. Make sure the raw data files are in `data/raw/`.
 2. Run the script:
@@ -70,19 +70,19 @@ python scripts/prepare_data.py
 ```
 
 # Section 3. Tools Used
-VS Code, Python, SQLite, ChatGPT, Power BI
+VS Code, Python, SQLite, ChatGPT, Jupyter Notebooks, Power BI, github
 
 
 # Section 4. Workflow & Logic
 ## Data Warehouse Creation
-After cleaning the data, we organize it into a data warehouse using SQLite for analysis and reporting.
+After cleaning the data, organize it into a data warehouse using SQLite for analysis and reporting.
 Data Warehouse Structure
 Location:
 data/dw/smart_store.db
 
 Tables:
 
-dim_customers – Dimension table containing enriched customer data (e.g., age, gender, region, age group).
+dim_customers – Dimension table containing customer data (e.g., age, gender, region, age group).
 
 dim_products – Dimension table with product details (name, category, unit price).
 
@@ -148,7 +148,6 @@ We want to discover who the most valuable customers are, where they are located,
 
 ### Planned Visualizations and Outputs
 1. Total Sales by Customer Region and Age Group
-Title: Total Sales by Region and Age Group
 
 Chart Type: Clustered Bar Chart
 
@@ -158,12 +157,9 @@ Y-Axis: Total Sales Amount
 
 Legend: Age Groups (e.g., "18–25", "26–35", etc.)
 
-Color Scheme: Use distinct colors for each age group for easy comparison
-
 Why this chart?: Easy to compare how different age segments perform across regions.
 
 2. High-Value Customer Count by Gender and Age Group
-Title: Number of High-Value Customers by Gender and Age Group
 
 Chart Type: Stacked Bar Chart
 
@@ -173,12 +169,9 @@ Y-Axis: Number of Customers
 
 Legend: Gender
 
-Highlight: Use bold colors to highlight large segments.
-
 Why this chart?: Reveals if loyalty and value are tied to certain demographic traits.
 
 3. Category Preferences of High-Value Customers
-Title: Preferred Product Categories of High-Value Customers
 
 Chart Type: Pie Chart or Horizontal Bar Chart
 
@@ -186,10 +179,9 @@ Labels: Category Names
 
 Values: % Share of Sales
 
-Why this chart?: Helps marketing or product teams understand which products appeal to VIP customers.
+Why this chart?: Helps marketing or product teams understand which products appeal to customers.
 
 4. Average Spend per Customer by Region
-Title: Average Spend per Customer by Region
 
 Chart Type: Column Chart
 
@@ -258,13 +250,13 @@ region, avg_spend_per_customer
 ### Slicing – Focus by Dimension
 Filter for high-value customers only
 
-Criteria: Customers with total spend > $1000 and purchase frequency > X
+Criteria: Customers with total spend > $10,000 and purchase frequency > X
 
 Implementation:
 
 Group by customer_id, aggregate sale_amount
 
-Filter to keep top customers (e.g., top 20% by spend)
+Filter to keep top customers
 
 ```
 python 
@@ -274,7 +266,7 @@ high_value_customers = sales_df.groupby('customerid').agg(
     purchases=('transactionid', 'count')
 ).reset_index()
 
-top_spenders = high_value_customers[high_value_customers['total_spent'] > 1000]
+top_spenders = high_value_customers[high_value_customers['total_spent'] > 10000]
 ```
 #### Heatmap of High-Value Customer Sales by Region and Category
 - Filtered the dataset to include only rows where `category == 'Electronics'`.
@@ -320,8 +312,8 @@ time_breakdown = time_trends.groupby(['sale_year', 'sale_quarter', 'sale_month_n
 
 ## Power BI
 Power BI Setup Instructions
-📥 1. Load Data
-Import your CSVs into Power BI (customers.csv, sales.csv, products.csv).
+1. Load Data
+Import your CSVs into Power BI.
 
 Ensure relationships are set up:
 
@@ -329,11 +321,11 @@ sales.customerid → customers.customerid
 
 sales.productid → products.productid
 
-🔍 Slicing – Focus on High-Value Customers
-💡 Business Question:
+Slicing – Focus on High-Value Customers
+Business Question:
 "Who are the store’s most valuable customers?"
 
-🔧 Steps:
+Steps:
 Create Measures:
 
 DAX
@@ -347,7 +339,7 @@ Slicing: By Region, Gender, Age Group
 Dicing: Multi-dimensional Breakdown
 - Bar chart of TotalSpend by region
 - Column chart of TotalSpend by category
-- tacked bar showing PurchaseFrequency by age_group and gender
+- Tacked bar showing PurchaseFrequency by age_group and gender
 
 Drilldown: From Year → Month → Day
 - Grouped fact_sales by sale_year, sale_month, sale_day
