@@ -14,13 +14,13 @@ Analyze customers based on total spend and purchase frequency, then analyze wher
 
 4. Do certain demographics tend to be more loyal or spend more?
 
-# Create files and folders
+## Create files and folders
 .gitignore, requirements.txt, .venv, utils with logger.py, data folder with raw and prepared and scripts folder.
 Then get the csv files and add data, then upload to data raw.
 
 # Section 2. Data Source
 
-## 📁 Files Involved: [smart-sales-raw-data](https://github.com/denisecase/smart-sales-raw-data/tree/main)
+## Files Involved: [smart-sales-raw-data](https://github.com/denisecase/smart-sales-raw-data/tree/main)
 
 **Raw Data Files** (stored in `data/raw/`):
 - `customers_data.csv`: Customer details including demographics.
