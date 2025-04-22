@@ -15,9 +15,6 @@ env/
 # --- VS Code settings ---
 .vscode/
 
-# --- Power BI files ---
-*.pbix
-*.pbit
 # Optional: ignore temporary analysis files or autosaves
 *.pbix.autosave
 
