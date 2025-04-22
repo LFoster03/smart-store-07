@@ -442,7 +442,31 @@ High value customers based on age groups and gender:
 
 # Section 6. Suggested Business Action
 
+- Females aged 36–45 are the most frequent and valuable customers. The business could start a loyalty program with incentives tailored to this group. They could also send tailored marketing emails to this group based on the categories they buy the most. 
+- Since electronics is the highest spend category, the business could adopt a Pay Later system where the customer is able to pay later or in installments for higher priced items.
+- The east is a high value region while the north is falling behind. The business could start marketing more in the north to increase visibility. 
+- Spring and summer are seasons that see the most money spent consistently. The business could keep marketing seasonally, by launching spring or summer lines, however they could also offer incentives such as free shipping or discount codes during the winter season to persuade customers to buy then. 
+- Hermione Granger and William White spent the most, the business could reach out to them for reviews. 
 
+# Section 7. Challenges
 
-Section 7. Challenges
-Section 8. Ethical Considerations
+- The business needs to make sure they are not focusing too much on the high value demographic (females 36-45) and forget about the other customers. However, if they don't reward the high value demographic, they could lose them.  
+- The business also needs to keep track of inventory during the high spend and low spend seasons. 
+- The difference between total spend in the East and the North is quite a lot. The business should find out why the north is not spending as much or as frequently. 
+- It would be best to get a more consistent spend amount over the year. 
+
+# Section 8. Ethical Considerations
+## Data Privacy and Consent
+Customers' demographic and purchase data is sensitive. Also, only having male and female as options may not give an accurate read on the customers' demographics. 
+## Avoiding Bias and Discrimination
+Only focusing on females aged 36–45 might lead to ageism, sexism, or exclusion of other groups.
+## Exploitation
+Using targeted marketing can be pressuring. Use marketing campaigns that aren't aggressive.
+## Responsible Use of Predictive Analytics
+Don't judge high and low value customers solely on this data. Use human insight to make the right choices. 
+## Data Retention and Security
+Don't hold on to data. Allow customers the choice to erase or take back their data. 
+## Transparency
+Make it known when decisions are AI-driven and ensure algorithms are reviewed for fairness and accuracy.
+## Inclusive Representation
+Include diverse representation in marketing campaigns. 
